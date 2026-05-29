@@ -11,7 +11,7 @@ rm -rf ~/.scripts
 git clone --single-branch --branch main https://github.com/majinsaay/scripts.git ~/.scripts
 
 # change working dir
-cd ~/.scripts || exit 1
+cd ~/.scripts/termux || exit 1
 
 # make executable
 chmod u+x *
@@ -30,7 +30,7 @@ echo "" >> ~/.zshrc
 
 # make alias for each script
 for i in *.sh; do
-  echo -e "alias ${i%.sh}='. ~/.scripts/$i'" >> ~/.zshrc
+  echo -e "alias ${i%.sh}='. ~/.scripts/termux/$i'" >> ~/.zshrc
 done
 
 # close block
